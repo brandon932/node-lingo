@@ -15,7 +15,7 @@ Question.prototype.getWord = function(){
 Question.prototype.renderWord = function(){
   console.log("test");
 };
-Question.prototype.getTranslation = function(){
+Question.prototype.getTranslation = function(word){
   console.log("test");
 };
 Question.prototype.checkUserAnswer = function(){
