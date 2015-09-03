@@ -1,28 +1,48 @@
 // constructor
-function Question(){
-  this.userAnswer =0 ;
-  this.word = 0;
+function Question(word){
+  this.userAnswer = null;
+  this.word = word;
   this.translatedWord = 0;
   this.isCorrect = 0;
+  this.
 }
 //
 Question.prototype.setUserAnswer = function(){
-  console.log("test");
+  this.userAnswer = $("#user-answer").val();
 };
-Question.prototype.getWord = function(){
-  console.log("test");
-};
+
 Question.prototype.renderWord = function(){
-  console.log("test");
+  $("#question-word").html(this.word);
 };
 Question.prototype.getTranslation = function(word){
   console.log("test");
 };
 Question.prototype.checkUserAnswer = function(){
-  console.log("test");
+  if (this.userAnswer === this.translatedWord){
+    this.isCorrect = true;
+  }
+  else if (this.userAnswer.length === this.translatedWord.length){
+    this.isCorrect = false;
+  }
+  else if (this.isAcceptable()){
+    this.isCorrect = true;
+  }
+  else {
+    this.isCorrect = false;
+  }
 };
+
 Question.prototype.isAcceptable = function(){
-  console.log("test");
+  var count = 0;
+  for (var i = 0; i < this.userAnswer.length; i++) {
+    if (this.translatedWord.word[i] !== this.userAnswer[i]){
+      count++;
+    }
+  };
+  if (count > 1){
+    return false;
+  }
+  else return true;
 };
 
 module.exports = Question;
