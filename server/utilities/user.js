@@ -1,12 +1,17 @@
 // constructor
-function User(){
-  this.quizPassed= 0 ;
-  this.quizCount= 0;
-  this.quizFailed= 0;
-  this.quizes= 0;
+function User(name){
+  this.name = name;
+  this.quizesPassed = 0;
+  // this.quizCount = 0;
+  this.quizesFailed = 0;
+  this.quizes = [];
 }
-User.prototype.updateQuizCount = function(){
-  console.log("test");
+
+
+User.prototype.addQuiz = function(quiz){
+  this.quizes.push(quiz);
 };
+
+
 
 module.exports = User;
