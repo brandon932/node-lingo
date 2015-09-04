@@ -2,9 +2,8 @@
 function Question(word){
   this.userAnswer = null;
   this.word = word;
-  this.translatedWord = 0;
-  this.isCorrect = 0;
-  this.
+  this.translatedWord = null;
+  this.isCorrect = null;
 }
 //
 Question.prototype.setUserAnswer = function(){
