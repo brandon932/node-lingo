@@ -1,7 +1,6 @@
 // constructor
-function Quiz(language, type, wordArray){
+function Quiz(language, wordArray){
   this.languageChoice= language;
-  // this.type =
   this.words = wordArray;
   this.questions = [];
   this.currentQuestion= 0;

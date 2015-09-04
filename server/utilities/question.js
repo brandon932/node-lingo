@@ -8,8 +8,8 @@ var bt = require('bing-translate').init({
 function Question(word){
   this.userAnswer = null;
   this.word = word;
-  this.translatedWord = 0;
-  this.isCorrect = 0;
+  this.translatedWord = null;
+  this.isCorrect = null;
 }
 //
 Question.prototype.setUserAnswer = function(){
