@@ -5,6 +5,11 @@ function Game(){
   this.user;
 }
 
+Game.prototype.prepareWordArray = function (string) {
+  var array = string.split(' ');
+  return array;
+};
+
 Game.prototype.init = function () {
   var name = $('#name-input').val;
   this.user = new User(name);
@@ -26,6 +31,27 @@ Game.prototype.renderFail = function () {
     $('#message').html("Sorry, you f'ed up!");
 };
 
+//// event handlers ////
+login
+ - init
+ - next modal
+startgame
+ - if quiz 
+    - new quiz
+ - if practice
+    - show question
+submitword
+nextquestion
 
+var string = hello
+function sayHello(){'hello'}
+
+var sayHello
+
+restart
+changeruser
+
+
+// Need to add user stats rendering.
 // we have practice
 // add quiz language wordArray
