@@ -1,7 +1,8 @@
 var key1 = require('../../keys');
+require('dotenv').load();
 var bt = require('bing-translate').init({
   client_id: 'Linquiztics',
-  client_secret: key1
+  client_secret: process.env.LANGUAGE_KEY
 });
 
 // constructor
