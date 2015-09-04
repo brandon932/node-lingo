@@ -1,11 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var Question = require("../utilities/question");
+var Question = require("../../client/utilities/question");
 
+var bt = require('bing-translate').init({
+  client_id: 'Linquiztics',
+  client_secret:key1
+});
 
 router.get('/user', function(req, res, next) {
   test = new Question();
-  test.getTranslation("hello");
+  test.getTranslation("hello",'en','es');
   res.render('index', { title: 'Node-Translate' });
 });
 
