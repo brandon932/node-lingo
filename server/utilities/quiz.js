@@ -2,10 +2,11 @@
 function Quiz(language, type, wordArray){
   this.languageChoice= language;
   // this.type =
-  this.words= wordArray;
+  this.words = wordArray;
   this.questions = [];
   this.currentQuestion= 0;
-  this.isFailed= 0;
+  this.isFailed = false;
+  this.isPassed = false;
   this.results = new Results(0, 0, 0, 20);
 }
 
@@ -50,6 +51,13 @@ Quiz.prototype.nextQuestion= function(){
 Quiz.prototype.checkFailQuiz= function(){
   if (this.results.questionsIncorrect >= 5) {
     this.renderFail();
+    this.isFailed = true;
+  }
+};
+
+Quiz.prototype.checkPassQuiz = function () {
+  if (this.results.questionsCorrect > 15 && this.results.questionsRemaining === 0){
+    this.isPassed = true;
   }
 };
 

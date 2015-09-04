@@ -6,3 +6,144 @@ body {
 a {
   color: #00B7FF;
 }
+
+ /*fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Titillium', Georgia, Times, serif;
+    color: black;
+}
+
+p, div {
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    color: black;
+}
+
+/*main background*/
+.base {
+  background-color: #ADD6FF;
+  min-height: 600px;
+  max-height: 1300px;
+}
+
+/*game background */
+.main {
+  width: 1000px;
+  height: 600px;
+  margin: 80px;
+
+}
+
+/*left box*/
+.left {
+  height: 500px;
+  background-color: red;
+}
+
+.word {
+  font-size: 3em;
+  margin-top: 40px;
+ /* margin-left: 20px;*/
+}
+.user-guess {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/*controls the line height of the input boxes*/
+input {
+  line-height: 26px;
+}
+
+.sentence {
+  font-size: 1.8em;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.hint {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-style: italic;
+}
+
+.answer {
+  font-size: 3.3em;
+  margin-top: 60px;
+  font-style: bold;
+}
+
+.message {
+  font-size: 1.8em;
+  margin-left: 20px;
+  margin-top: 80px;
+}
+
+/*end left box*/
+
+/*right box*/
+.right {
+  height: 500px;
+  background-color: yellow
+}
+
+.statistics {
+  padding: 10px;
+  padding-top: 150px;
+}
+
+.stats {
+
+}
+
+/* start screen modal*/
+.modal {
+  font-color: black;
+  margin-top: 100px;
+}
+
+.modal-space{
+  margin-left:20px;
+}
+
+/*Helper classes*/
+.inline {
+  display: inline-block;
+}
+
+.center {
+  text-align: center;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: black;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: white; /*BACKGROUND color for active*/
+background-color: #030033;
+}
+
+  .navbar-default {
+    background-color: #0f006f;
+    border-color: #030033;
+}
+
+  .dropdown-menu > li > a:hover,
+   .dropdown-menu > li > a:focus {
+    color: #262626;
+   text-decoration: none;
+  background-color: #66CCFF;  /*change color of links in drop down here*/
+   }
+
+ .nav > li > a:hover,
+ .nav > li > a:focus {
+    text-decoration: none;
+    background-color: silver; /*Change rollover cell color here*/
+  }
+
+
+  .navbar-default .navbar-nav > li > a {
+   color: white; /*Change active text color here*/
+    }
