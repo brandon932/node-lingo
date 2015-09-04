@@ -32,24 +32,31 @@ Game.prototype.renderFail = function () {
 };
 
 //// event handlers ////
-login
- - init
- - next modal
-startgame
- - if quiz 
-    - new quiz
- - if practice
-    - show question
-submitword
-nextquestion
 
-var string = hello
-function sayHello(){'hello'}
+$('#login').on('click',function(){
+  game = new Game();
+  game.init();
+})
 
-var sayHello
+$('#start-quiz').on('click',function(){
 
-restart
-changeruser
+})
+
+$('#submit-answer').on('click',function(){
+
+})
+
+$('#next-question').on('click',function(){
+
+})
+
+$('#restart-quiz').on('click',function(){
+
+})
+
+$('#change-user').on('click',function(){
+
+})
 
 
 // Need to add user stats rendering.
