@@ -24,4 +24,9 @@ describe("Question Object Constructor", function(){
   it("has isCorrect property default of 'null'", function(){
     expect(question.isCorrect).toBe(null);
   });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> upstream/master
 });
