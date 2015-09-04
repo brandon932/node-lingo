@@ -1,10 +1,15 @@
+var keys = require('../../keys');
+var bt = require('bing-translate').init({
+  client_id: 'Linquiztics',
+  client_secret: keys.key1
+});
+
 // constructor
 function Question(word){
   this.userAnswer = null;
   this.word = word;
   this.translatedWord = 0;
   this.isCorrect = 0;
-  this.
 }
 //
 Question.prototype.setUserAnswer = function(){
@@ -15,6 +20,9 @@ Question.prototype.renderWord = function(){
   $("#question-word").html(this.word);
 };
 Question.prototype.getTranslation = function(word){
+  bt.translate(word, 'en', 'es', function(err, res){
+    console.log(err, res);
+  });
   console.log("test");
 };
 Question.prototype.checkUserAnswer = function(){
@@ -38,7 +46,7 @@ Question.prototype.isAcceptable = function(){
     if (this.translatedWord.word[i] !== this.userAnswer[i]){
       count++;
     }
-  };
+  }
   if (count > 1){
     return false;
   }

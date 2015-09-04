@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var Question = require("../utilities/question");
 
 
 router.get('/user', function(req, res, next) {
+  test = new Question();
+  test.getTranslation("hello");
   res.render('index', { title: 'Node-Translate' });
 });
 
