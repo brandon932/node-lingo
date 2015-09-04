@@ -5,6 +5,10 @@ router.get('/user', function(req, res, next) {
   res.render('index', { title: 'Node-Translate' });
 });
 
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Node-Translate' });
+});
+
 router.post('/user', function(req, res, next) {
   res.render('index', { title: 'Node-Translate' });
 });
