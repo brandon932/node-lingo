@@ -1,7 +1,7 @@
-var keys = require('../../keys');
+var key1 = require('../../keys');
 var bt = require('bing-translate').init({
   client_id: 'Linquiztics',
-  client_secret: keys.key1
+  client_secret: key1
 });
 
 // constructor
@@ -19,11 +19,12 @@ Question.prototype.setUserAnswer = function(){
 Question.prototype.renderWord = function(){
   $("#question-word").html(this.word);
 };
-Question.prototype.getTranslation = function(word){
-  bt.translate(word, 'en', 'es', function(err, res){
+Question.prototype.getTranslation = function(word, langFrom,langTo ){
+
+  bt.translate(word,langFrom,langTo, function(err, res){
     console.log(err, res);
+    return res;
   });
-  console.log("test");
 };
 Question.prototype.checkUserAnswer = function(){
   if (this.userAnswer === this.translatedWord){
